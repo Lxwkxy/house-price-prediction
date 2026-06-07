@@ -1,2 +1,16 @@
-data/ 
-venv/ 
+# Data files
+*.csv
+data/
+
+# Environments
+venv/
+.venv/
+env/
+
+# Jupyter & Python cache
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+
+# OS generated files
+.DS_Store
