@@ -35,7 +35,7 @@ Created highly impactful composite features that mirror real-world real estate v
 
 **Step 1: Clone the repository**
 
-    git clone [https://github.com/Lxwkxy/house-price-prediction](https://github.com/Lxwkxy/house-price-prediction)
+    git clone https://github.com/Lxwkxy/house-price-prediction.git
 
 **Step 2: Install the required dependencies**
 
