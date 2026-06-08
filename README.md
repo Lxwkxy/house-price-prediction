@@ -15,6 +15,7 @@ The goal of this project is to accurately predict the `SalePrice` of houses base
 
 ### 1. Data Preprocessing & Cleaning
 * Handled missing values strategically (e.g., filling 'None' for properties without pools/garages, and median values for numerical columns).
+* **Outlier Removal:** Identified and removed extreme outliers based on dataset documentation (e.g., properties with massive living areas but unusually low sale prices) to stabilize model training and prevent skewed predictions.
 * Addressed the "Sparse Data Explosion" problem caused by categorical one-hot encoding.
 
 ### 2. Feature Engineering
@@ -42,7 +43,7 @@ Created highly impactful composite features that mirror real-world real estate v
     pip install pandas numpy scikit-learn xgboost matplotlib seaborn
 
 **Step 3: Run the pipeline**
-Run the main script or Jupyter Notebook to preprocess the data, train the model, and generate the `submission.csv` file.
+Run the main notebook (`house_price.ipynb`) to preprocess the data, train the models, and generate the `submission.csv` file.
 
 ## 📌 Conclusion
-This project serves as a comprehensive template for solving tabular data challenges, emphasizing the importance of domain-knowledge feature engineering and the strategic transition from linear to tree-based algorithms.
+This project serves as a comprehensive template for solving tabular data challenges, emphasizing the importance of domain-knowledge feature engineering, strategic data cleaning (outlier handling), and the transition from linear to tree-based algorithms.
