@@ -13,21 +13,21 @@ The goal of this project is to accurately predict the `SalePrice` of houses base
 
 ## 🧠 Methodology & Key Highlights
 
-### 🧹 1. Data Preprocessing & Cleaning
+### 1. Data Preprocessing & Cleaning
 * Handled missing values strategically (e.g., filling 'None' for properties without pools/garages, and median values for numerical columns).
 * **Outlier Removal:** Identified and removed extreme outliers based on dataset documentation (e.g., properties with massive living areas but unusually low sale prices) to stabilize model training and prevent skewed predictions.
 * Addressed the sparse data explosion problem caused by categorical one-hot encoding by carefully aligning train and test datasets.
 
-### 🏗️ 2. Feature Engineering
+### 2. Feature Engineering
 Created highly impactful composite features that mirror real-world real estate valuation:
 * `TotalSF`: Combined total square footage across all floors and basement.
 * `TotalBath`: Aggregated full and half bathrooms.
 * `HouseAge`: Calculated the true age of the house at the time of sale (`YrSold` - `YearBuilt`).
 
-### 🔍 3. Feature Selection & Analysis
+### 3. Feature Selection & Analysis
 * Utilized **Mutual Information (MI)** to detect complex, non-linear relationships between features and the target variable, proving that standard correlation metrics are often insufficient for real estate data.
 
-### 🏆 4. Advanced Modeling Strategy (Stacking Ensemble)
+### 4. Advanced Modeling Strategy (Stacking Ensemble)
 Implemented a sophisticated Stacking Regressor to maximize predictive accuracy:
 * **Tree-Based Base Model:** `XGBRegressor` tuned with strict hyperparameters (`learning_rate`, `max_depth`, `subsample`) to capture complex, non-linear interactions without overfitting.
 * **Linear Base Models via Pipeline:** `RidgeCV` (L2) and `LassoCV` (L1) regressions integrated with `StandardScaler` inside a scikit-learn `Pipeline`. This ensures scale-sensitive algorithms receive properly standardized data seamlessly during cross-validation, while keeping the global variables untouched.
